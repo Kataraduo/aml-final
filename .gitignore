@@ -1,2 +1,2 @@
-data/raw/Images/*
-data/interim/img_features.pkl
+datasets/flickr
+checkpoints/flickr
