@@ -1,2 +1,2 @@
-data/raw/*
-data/interim/*
+data/raw/Images/*
+data/interim/img_features.pkl
