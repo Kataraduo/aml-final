@@ -2,6 +2,7 @@ import os
 from keras.models import Model
 from keras.layers import Input, Dense, LSTM, Embedding, Dropout, add
 
+
 CHECKPOINTS = "./checkpoints/flickr"
 
 
