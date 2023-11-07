@@ -1,2 +1,6 @@
 datasets/flickr
 checkpoints/flickr
+
+.DS_Store
+
+checkpoints.zip

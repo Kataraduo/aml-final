@@ -14,6 +14,7 @@ class BaselineModel:
 
     def build_model(self):
         # features from the CNN model squeezed from 2048 to 256 nodes
+        # 优化1: Other image feature extraction methods (Xception)
         inputs1 = Input(shape=(2048,))
         fe1 = Dropout(0.5)(inputs1)
         fe2 = Dense(256, activation='relu')(fe1)
@@ -22,8 +23,14 @@ class BaselineModel:
         inputs2 = Input(shape=(self.max_length,))
         se1 = Embedding(self.vocab_size, 256, mask_zero=True)(inputs2)
         se2 = Dropout(0.5)(se1)
+        # 优化2: Other decoders (e.g., Transformer)
         se3 = LSTM(256)(se2)
 
+        # 第三个feature fe3
+        # [1 0 0] - IG
+        # [0 1 0] - LinkedIn
+        # [0 0 1] - Existing dataset
+           
         # Merging both models
         decoder1 = add([fe2, se3])
         decoder2 = Dense(256, activation='relu')(decoder1)
