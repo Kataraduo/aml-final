@@ -4,3 +4,6 @@ checkpoints/flickr
 .DS_Store
 
 checkpoints.zip
+
+# Any zip files
+*.zip
