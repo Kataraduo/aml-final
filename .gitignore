@@ -7,3 +7,13 @@ checkpoints.zip
 
 # Any zip files
 *.zip
+
+# Any log files
+*.log
+
+# Any .ipynb_checkpoints folder under any folder
+**/.ipynb_checkpoints
+.ipynb_checkpoints
+
+# Any __pycache__ folder under any folder
+**/__pycache__
