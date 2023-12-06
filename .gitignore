@@ -12,8 +12,9 @@ checkpoints.zip
 *.log
 
 # Any .ipynb_checkpoints folder under any folder
-**/.ipynb_checkpoints
-.ipynb_checkpoints
+**/.ipynb_checkpoints/
+.ipynb_checkpoints/
+.ipynb_checkpoints/main-checkpoint.py
 
 # Any __pycache__ folder under any folder
 **/__pycache__
