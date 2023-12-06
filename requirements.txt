@@ -1,2 +1,6 @@
+tensorflow
 nltk
-pycocoevalcap
+matplotlib
+numpy
+einops
+tqdm
