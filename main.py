@@ -84,7 +84,7 @@ def main():
     )
 
     # Callbacks
-    g = GenerateText()
+    g = GenerateText(load_image=flickr8k_dataset.load_image)
     g.model = model
     g.on_epoch_end(0)
 

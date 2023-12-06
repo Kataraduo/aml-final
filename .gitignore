@@ -18,3 +18,9 @@ checkpoints.zip
 
 # Any __pycache__ folder under any folder
 **/__pycache__
+
+# test_cache folder and train_cache folder
+test_cache/
+train_cache/
+**/test_cache/
+**/train_cache/
