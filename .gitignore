@@ -1,5 +1,6 @@
 datasets/flickr
 checkpoints/flickr
+datasets/ig
 
 .DS_Store
 

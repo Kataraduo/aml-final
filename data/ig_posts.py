@@ -29,7 +29,8 @@ def obtain_ig_posts_json(dir):
         jpgs = [filename for filename in os.listdir(
             dir + directoryName) if re.search(r'\.jpg$', filename)]
 
-        # obtain txt file name, read text data -> dictionary[user][postID]['caption']
+        # obtain txt file name, read text data
+        # -> dictionary[user][postID]['caption']
         txt = [filename for filename in os.listdir(
             dir + directoryName) if re.search(r'\.txt$', filename)]
         caption = ""
@@ -46,21 +47,8 @@ def obtain_ig_posts_json(dir):
     return dictionary
 
 
-dir = 'tuning_data_ig_posts_raw/'
+dir = '../datasets/ig/raw/'
 dictionary = obtain_ig_posts_json(dir)
 
-with open("tuning_data_ig_posts.json", "w") as outfile:
+with open("../datasets/ig/ig_posts.json", "w") as outfile:
     json.dump(dictionary, outfile, indent=4)
-
-
-# dictionary = { userID1 : { postID1: {"caption":"______",
-#                                      "images": [ "_____.jpg", "_____.jpg", ... ]},
-#                            postID2: {"caption":"______",
-#                                      "images": [ "_____.jpg", "_____.jpg", ... ]},
-#                            ... },
-#                userID2 : { postID1: {"caption":"______",
-#                                      "images": [ "_____.jpg", "_____.jpg", ... ]},
-#                            postID2: {"caption":"______",
-#                                      "images": [ "_____.jpg", "_____.jpg", ... ]},
-#                            ... },
-#                ...                                                           }
